@@ -1,0 +1,138 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #07050c;
+  --gold: #ffd700;
+  --gold-deep: #c9a227;
+  --purple: #9d4edd;
+  --purple-deep: #5a189a;
+  --chrome: #d7dbe3;
+}
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-gold: var(--gold);
+  --color-gold-deep: var(--gold-deep);
+  --color-purple: var(--purple);
+  --color-purple-deep: var(--purple-deep);
+  --color-chrome: var(--chrome);
+  --font-sans: var(--font-geist);
+  --font-display: var(--font-anton);
+  --font-marker: var(--font-permanent);
+  --font-bang: var(--font-bungee);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--ink);
+  color: #f4f0ff;
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+}
+
+.gold-text {
+  background: linear-gradient(180deg, #fff6c2 0%, #ffd700 42%, #b8860b 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.chrome-text {
+  background: linear-gradient(180deg, #ffffff 0%, #cfd4dc 45%, #8b919a 70%, #f8fafc 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.neon-purple {
+  color: #e0aaff;
+  text-shadow:
+    0 0 8px #c77dff,
+    0 0 22px #7b2cbf,
+    0 0 42px #5a189a;
+}
+
+.neon-gold {
+  color: #ffe566;
+  text-shadow:
+    0 0 8px #ffd700,
+    0 0 20px #c9a227;
+}
+
+.graffiti-panel {
+  background:
+    radial-gradient(circle at 20% 20%, rgba(157, 78, 221, 0.25), transparent 42%),
+    radial-gradient(circle at 80% 70%, rgba(255, 215, 0, 0.12), transparent 36%),
+    repeating-linear-gradient(
+      125deg,
+      rgba(255, 255, 255, 0.015) 0 2px,
+      transparent 2px 7px
+    ),
+    #0c0814;
+}
+
+.chain-border {
+  background-image: repeating-linear-gradient(
+    90deg,
+    #ffd700 0 10px,
+    #7a5a00 10px 14px,
+    #ffe566 14px 22px,
+    #0a0a0a 22px 28px
+  );
+}
+
+.drip::after {
+  content: "";
+  position: absolute;
+  left: 18%;
+  bottom: -18px;
+  width: 8px;
+  height: 22px;
+  border-radius: 999px;
+  background: currentColor;
+  opacity: 0.85;
+  box-shadow:
+    28px 8px 0 -1px currentColor,
+    64px 4px 0 -2px currentColor;
+}
+
+.card-glow {
+  box-shadow:
+    0 0 0 1px rgba(255, 215, 0, 0.18),
+    0 18px 40px rgba(0, 0, 0, 0.45);
+}
+
+.card-glow:hover {
+  box-shadow:
+    0 0 0 1px rgba(255, 215, 0, 0.5),
+    0 0 28px rgba(157, 78, 221, 0.28),
+    0 22px 48px rgba(0, 0, 0, 0.55);
+}
+
+.marquee {
+  animation: marquee 28s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.hero-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: #5a189a;
+  box-shadow: 0 0 0 2px #1a0b2e;
+}
+
+.hero-dot[data-active="true"] {
+  background: #ffd700;
+  box-shadow: 0 0 12px #ffd700;
+}

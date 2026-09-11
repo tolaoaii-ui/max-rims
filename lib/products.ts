@@ -1,0 +1,536 @@
+import { monthlyFrom } from "./site";
+
+export type ProductBadge = "SALE" | "READY TO SHIP" | "NEW" | "FORGED" | "DONK" | "HOT";
+
+export type ProductFinish = "Chrome" | "Gold" | "Black / Gold" | "Purple" | "Blackout";
+
+export type Product = {
+  slug: string;
+  sku: string;
+  name: string;
+  series: string;
+  blurb: string;
+  description: string;
+  image: string;
+  sizes: string[];
+  finish: ProductFinish;
+  offset: string;
+  boltPattern: string;
+  width: string;
+  weight: string;
+  price: number;
+  compareAt?: number;
+  badges: ProductBadge[];
+  readyToShip: boolean;
+  featured: boolean;
+};
+
+export const products: Product[] = [
+  {
+    slug: "oaktown-spinner",
+    sku: "MR-OAK-SPN-22",
+    name: "Oaktown Spinner",
+    series: "Oaktown",
+    blurb: "Seven-spoke spinner energy for the Town.",
+    description:
+      "House favorite. Deep chrome dish, spinner ring, and a center cap stamped MR. Built for Impalas, Caprices, and anything that ghost-rides the block.",
+    image: "/rims/spinner-chrome.svg",
+    sizes: ["22\"", "24\""],
+    finish: "Chrome",
+    offset: "+15 to +20",
+    boltPattern: "5x120.65",
+    width: "8.5–9.5\"",
+    weight: "32 lb (demo)",
+    price: 899,
+    compareAt: 1099,
+    badges: ["SALE", "READY TO SHIP", "HOT"],
+    readyToShip: true,
+    featured: true,
+  },
+  {
+    slug: "thizz-deep-dish",
+    sku: "MR-THZ-DD-22",
+    name: "Thizz Deep Dish",
+    series: "Thizz",
+    blurb: "Chrome deep dish. Dance-floor lip.",
+    description:
+      "The deep-dish chrome that started the mural. Thick lip, polished barrel, five-lug GM pattern. Pair it with a purple flake or leave it naked chrome.",
+    image: "/rim-chrome.png",
+    sizes: ["20\"", "22\""],
+    finish: "Chrome",
+    offset: "+18",
+    boltPattern: "5x120.65",
+    width: "8.5\"",
+    weight: "29 lb (demo)",
+    price: 1249,
+    compareAt: 1499,
+    badges: ["SALE", "READY TO SHIP"],
+    readyToShip: true,
+    featured: true,
+  },
+  {
+    slug: "hyphy-forged",
+    sku: "MR-HYP-FRG-20",
+    name: "Hyphy Forged",
+    series: "Hyphy",
+    blurb: "Black + gold multi-spoke. Lightweight flex.",
+    description:
+      "Forged blank, machined spokes, gold lip and gold hardware. Lighter than the cast chrome, louder than the club parking lot.",
+    image: "/rim-black-gold.png",
+    sizes: ["20\"", "22\""],
+    finish: "Black / Gold",
+    offset: "+22",
+    boltPattern: "5x114.3",
+    width: "8.5–10\"",
+    weight: "21 lb (demo)",
+    price: 1899,
+    compareAt: 2199,
+    badges: ["FORGED", "NEW"],
+    readyToShip: true,
+    featured: true,
+  },
+  {
+    slug: "bay-bridge-chrome",
+    sku: "MR-BAY-CHR-24",
+    name: "Bay Bridge Chrome",
+    series: "Bay Bridge",
+    blurb: "24-inch chrome that reads from the bridge.",
+    description:
+      "Wide chrome face, tight barrel, ready for a lowered G-body or a lifted scraper. Named after the skyline in the mural.",
+    image: "/rim-chrome.png",
+    sizes: ["22\"", "24\""],
+    finish: "Chrome",
+    offset: "+12",
+    boltPattern: "5x120.65",
+    width: "9–10\"",
+    weight: "34 lb (demo)",
+    price: 1349,
+    compareAt: 1549,
+    badges: ["SALE", "READY TO SHIP"],
+    readyToShip: true,
+    featured: true,
+  },
+  {
+    slug: "east-14th-scraper-20",
+    sku: "MR-SCR-20",
+    name: "East 14th Scraper 20",
+    series: "Scraper",
+    blurb: "Daily scraper size. Chrome five-spoke.",
+    description:
+      "Twenty-inch scraper spec with extra lip for the slam. Mounts clean on Caprice, Impala, and Buick Grand National-style G-bodies.",
+    image: "/rims/scraper-20.svg",
+    sizes: ["20\""],
+    finish: "Chrome",
+    offset: "+10",
+    boltPattern: "5x120.65",
+    width: "8\"",
+    weight: "28 lb (demo)",
+    price: 749,
+    badges: ["READY TO SHIP"],
+    readyToShip: true,
+    featured: false,
+  },
+  {
+    slug: "town-scraper-22",
+    sku: "MR-SCR-22",
+    name: "Town Scraper 22",
+    series: "Scraper",
+    blurb: "The Oakland default. 22s, chrome, period.",
+    description:
+      "Six-spoke chrome scraper. The size most of the Town still asks for. Demo SKU — come through with your bolt pattern.",
+    image: "/rims/scraper-22.svg",
+    sizes: ["22\""],
+    finish: "Chrome",
+    offset: "+15",
+    boltPattern: "5x120.65",
+    width: "8.5\"",
+    weight: "31 lb (demo)",
+    price: 849,
+    compareAt: 949,
+    badges: ["SALE", "HOT"],
+    readyToShip: true,
+    featured: true,
+  },
+  {
+    slug: "international-scraper-24",
+    sku: "MR-SCR-24",
+    name: "International Scraper 24",
+    series: "Scraper",
+    blurb: "Gold lip 24s for the boulevard.",
+    description:
+      "Bigger face, gold lip, still a scraper stance. Looks right under a two-tone or a candy paint job.",
+    image: "/rims/scraper-24.svg",
+    sizes: ["24\""],
+    finish: "Gold",
+    offset: "+8",
+    boltPattern: "5x127",
+    width: "9.5\"",
+    weight: "36 lb (demo)",
+    price: 1199,
+    badges: ["READY TO SHIP"],
+    readyToShip: true,
+    featured: false,
+  },
+  {
+    slug: "donk-king-scraper-26",
+    sku: "MR-SCR-26",
+    name: "Donk King Scraper 26",
+    series: "Scraper",
+    blurb: "Twenty-sixes. Donk height. Chrome blades.",
+    description:
+      "If the car is sitting in the clouds, these are the plates. 26x10 chrome blades with a deep barrel for the donk look.",
+    image: "/rims/scraper-26.svg",
+    sizes: ["26\""],
+    finish: "Chrome",
+    offset: "0 to +10",
+    boltPattern: "5x120.65",
+    width: "10\"",
+    weight: "41 lb (demo)",
+    price: 1699,
+    compareAt: 1899,
+    badges: ["DONK", "SALE"],
+    readyToShip: false,
+    featured: true,
+  },
+  {
+    slug: "ghost-ride-mesh",
+    sku: "MR-GST-MSH-22",
+    name: "Ghost Ride Mesh",
+    series: "Ghost Ride",
+    blurb: "Fine mesh chrome. Club-lot classic.",
+    description:
+      "Tight mesh face that reads expensive at night. Chrome throughout, five-lug GM. Named for the song, not the crime.",
+    image: "/rims/mesh-chrome.svg",
+    sizes: ["20\"", "22\""],
+    finish: "Chrome",
+    offset: "+20",
+    boltPattern: "5x120.65",
+    width: "8.5\"",
+    weight: "30 lb (demo)",
+    price: 999,
+    badges: ["READY TO SHIP"],
+    readyToShip: true,
+    featured: true,
+  },
+  {
+    slug: "yayo-gold-lip",
+    sku: "MR-YAY-GLD-22",
+    name: "Yayo Gold Lip",
+    series: "Yayo",
+    blurb: "Gold hardware on a black dish.",
+    description:
+      "Black barrel, gold lip, gold lugs. The photo wheel. Looks like money under streetlights and worse under fluorescent shop lights — in a good way.",
+    image: "/rim-black-gold.png",
+    sizes: ["20\"", "22\"", "24\""],
+    finish: "Black / Gold",
+    offset: "+18",
+    boltPattern: "5x114.3",
+    width: "8.5–9.5\"",
+    weight: "27 lb (demo)",
+    price: 1449,
+    compareAt: 1649,
+    badges: ["SALE", "HOT"],
+    readyToShip: true,
+    featured: true,
+  },
+  {
+    slug: "mac-street-five",
+    sku: "MR-MAC-5SP-22",
+    name: "Mac Street 5-Spoke",
+    series: "Mac Street",
+    blurb: "Simple chrome five-spoke. No extra talk.",
+    description:
+      "Clean five-spoke chrome with a fat lip. For the driver who wants the car to do the talking and the rims to just shine.",
+    image: "/rims/five-chrome.svg",
+    sizes: ["18\"", "20\"", "22\""],
+    finish: "Chrome",
+    offset: "+25",
+    boltPattern: "5x120.65",
+    width: "8\"",
+    weight: "26 lb (demo)",
+    price: 799,
+    badges: ["READY TO SHIP"],
+    readyToShip: true,
+    featured: false,
+  },
+  {
+    slug: "pill-hill-polish",
+    sku: "MR-PIL-POL-20",
+    name: "Pill Hill Polish",
+    series: "Pill Hill",
+    blurb: "Concave polish. Steep face.",
+    description:
+      "Concave blade spokes, full polish. Sits pretty on a shorty or a coupe. Demo finish — real polish takes shop time.",
+    image: "/rims/polish-concave.svg",
+    sizes: ["20\"", "22\""],
+    finish: "Chrome",
+    offset: "+30",
+    boltPattern: "5x114.3",
+    width: "9\"",
+    weight: "24 lb (demo)",
+    price: 1149,
+    badges: ["NEW"],
+    readyToShip: true,
+    featured: false,
+  },
+  {
+    slug: "fruitvale-flake",
+    sku: "MR-FRT-FLK-22",
+    name: "Fruitvale Flake",
+    series: "Fruitvale",
+    blurb: "Gold flake mesh. Night-shift loud.",
+    description:
+      "Mesh face with a gold flake lip treatment. Made for candy paint and wet asphalt. Not subtle. Not trying to be.",
+    image: "/rims/flake-gold.svg",
+    sizes: ["22\"", "24\""],
+    finish: "Gold",
+    offset: "+12",
+    boltPattern: "5x120.65",
+    width: "9\"",
+    weight: "33 lb (demo)",
+    price: 1299,
+    badges: ["READY TO SHIP"],
+    readyToShip: true,
+    featured: false,
+  },
+  {
+    slug: "lake-merritt-lip",
+    sku: "MR-LKM-LIP-22",
+    name: "Lake Merritt Deep Lip",
+    series: "Lake Merritt",
+    blurb: "Purple dish, chrome hardware, deep lip.",
+    description:
+      "Purple-anodized dish with a chrome lip and spinner halo. Tribute colorway — original MAX RIMS art, not a replica of anyone’s mural.",
+    image: "/rims/deep-lip.svg",
+    sizes: ["22\""],
+    finish: "Purple",
+    offset: "+15",
+    boltPattern: "5x120.65",
+    width: "8.5\"",
+    weight: "31 lb (demo)",
+    price: 1099,
+    compareAt: 1299,
+    badges: ["SALE", "NEW"],
+    readyToShip: true,
+    featured: true,
+  },
+  {
+    slug: "east-14th-blade",
+    sku: "MR-E14-BLD-24",
+    name: "East 14th Blade",
+    series: "East 14th",
+    blurb: "Swept blades, black and gold.",
+    description:
+      "Seven swept blades, black windows, gold edges. Aggressive on a sedan, ridiculous on a wagon. We like ridiculous.",
+    image: "/rims/blade-black.svg",
+    sizes: ["22\"", "24\""],
+    finish: "Black / Gold",
+    offset: "+10",
+    boltPattern: "5x127",
+    width: "9.5\"",
+    weight: "35 lb (demo)",
+    price: 1399,
+    badges: ["READY TO SHIP"],
+    readyToShip: true,
+    featured: false,
+  },
+  {
+    slug: "eight-eighty-chrome-dub",
+    sku: "MR-880-DUB-26",
+    name: "880 Chrome Dub",
+    series: "880",
+    blurb: "26-inch chrome dubs. Freeway face.",
+    description:
+      "Named for the stretch, not the traffic. Big chrome dubs for donks and show Impalas. Confirm backspacing before you pull up.",
+    image: "/rim-chrome.png",
+    sizes: ["26\""],
+    finish: "Chrome",
+    offset: "+5",
+    boltPattern: "5x120.65",
+    width: "10\"",
+    weight: "42 lb (demo)",
+    price: 1799,
+    badges: ["DONK", "READY TO SHIP"],
+    readyToShip: true,
+    featured: true,
+  },
+  {
+    slug: "west-oakland-wire",
+    sku: "MR-WOAK-WIR-22",
+    name: "West Oakland Wire",
+    series: "West Oakland",
+    blurb: "Old-school wire shine, new-school lip.",
+    description:
+      "Thirty-six wire spokes under a chrome lip. Classic Town language with a modern barrel so it clears most GM brakes.",
+    image: "/rims/wire-chrome.svg",
+    sizes: ["20\"", "22\""],
+    finish: "Chrome",
+    offset: "+18",
+    boltPattern: "5x120.65",
+    width: "8\"",
+    weight: "29 lb (demo)",
+    price: 1049,
+    badges: ["NEW"],
+    readyToShip: false,
+    featured: false,
+  },
+  {
+    slug: "town-business-split",
+    sku: "MR-TWN-SPL-22",
+    name: "Town Business Split",
+    series: "Town Business",
+    blurb: "Split-spoke black/gold. Payday wheel.",
+    description:
+      "Twelve split spokes, gold edges, black pockets. The “just got paid Friday” wheel. Demo price includes a set of four in the shop math — confirm with Max.",
+    image: "/rims/split-gold.svg",
+    sizes: ["20\"", "22\""],
+    finish: "Black / Gold",
+    offset: "+20",
+    boltPattern: "5x114.3",
+    width: "8.5\"",
+    weight: "28 lb (demo)",
+    price: 1549,
+    compareAt: 1749,
+    badges: ["SALE"],
+    readyToShip: true,
+    featured: true,
+  },
+  {
+    slug: "night-ride-blackout",
+    sku: "MR-NITE-BLK-20",
+    name: "Night Ride Blackout",
+    series: "Night Ride",
+    blurb: "All-black five-spoke. Stealth scraper.",
+    description:
+      "Satin black lip, dark hardware, no chrome flash. For the all-black Caprice that still wants size.",
+    image: "/rims/blackout.svg",
+    sizes: ["20\"", "22\""],
+    finish: "Blackout",
+    offset: "+25",
+    boltPattern: "5x120.65",
+    width: "8.5\"",
+    weight: "27 lb (demo)",
+    price: 699,
+    badges: ["READY TO SHIP"],
+    readyToShip: true,
+    featured: false,
+  },
+  {
+    slug: "gas-station-gold",
+    sku: "MR-GAS-GLD-22",
+    name: "Gas Station Gold",
+    series: "Gas Station",
+    blurb: "Loud gold. Parking-lot lighting approved.",
+    description:
+      "The gold that looks illegal under a gas station canopy. Multi-spoke, gold everything, black windows. Photo finish.",
+    image: "/rim-black-gold.png",
+    sizes: ["22\"", "24\""],
+    finish: "Gold",
+    offset: "+15",
+    boltPattern: "5x120.65",
+    width: "9\"",
+    weight: "32 lb (demo)",
+    price: 1599,
+    badges: ["HOT", "READY TO SHIP"],
+    readyToShip: true,
+    featured: true,
+  },
+  {
+    slug: "impala-ss-mesh",
+    sku: "MR-IMP-MSH-22",
+    name: "Impala SS Mesh",
+    series: "Impala SS",
+    blurb: "SS-spec mesh with a gold pinstripe lip.",
+    description:
+      "Mesh chrome with a thin gold ring — the combo on the red SS in the gallery. Demo fitment for 94–96 Impala SS and similar B-bodies.",
+    image: "/rims/impala-mesh.svg",
+    sizes: ["20\"", "22\""],
+    finish: "Chrome",
+    offset: "+20",
+    boltPattern: "5x127",
+    width: "8.5\"",
+    weight: "30 lb (demo)",
+    price: 1199,
+    compareAt: 1399,
+    badges: ["SALE"],
+    readyToShip: true,
+    featured: true,
+  },
+  {
+    slug: "oaktown-forged-concave",
+    sku: "MR-OAK-FRG-20",
+    name: "Oaktown Forged Concave",
+    series: "Oaktown",
+    blurb: "Forged concave gold. Light and mean.",
+    description:
+      "Eight-blade forged concave in gold. The expensive-looking one. Demo weight is the point — forged blanks, not cast chrome.",
+    image: "/rims/forged-concave.svg",
+    sizes: ["19\"", "20\""],
+    finish: "Gold",
+    offset: "+35",
+    boltPattern: "5x114.3",
+    width: "9.5\"",
+    weight: "19 lb (demo)",
+    price: 2099,
+    badges: ["FORGED", "NEW"],
+    readyToShip: false,
+    featured: false,
+  },
+  {
+    slug: "thizzelle-purple-spin",
+    sku: "MR-THZ-PRP-22",
+    name: "Thizzelle Purple Spin",
+    series: "Thizz",
+    blurb: "Purple spinner. Tribute colorway.",
+    description:
+      "Purple dish, chrome lip, spinner halo. Stylized MAX RIMS colorway nodding at the Bay — original art, no portraits, no lifted murals.",
+    image: "/rims/purple-thizz.svg",
+    sizes: ["22\""],
+    finish: "Purple",
+    offset: "+18",
+    boltPattern: "5x120.65",
+    width: "8.5\"",
+    weight: "31 lb (demo)",
+    price: 1179,
+    badges: ["NEW", "HOT"],
+    readyToShip: true,
+    featured: true,
+  },
+];
+
+export function getProduct(slug: string) {
+  return products.find((p) => p.slug === slug);
+}
+
+export function featuredProducts() {
+  return products.filter((p) => p.featured);
+}
+
+export function readyToShipProducts() {
+  return products.filter((p) => p.readyToShip);
+}
+
+export function relatedProducts(slug: string, limit = 4) {
+  const current = getProduct(slug);
+  if (!current) return products.slice(0, limit);
+  return products
+    .filter((p) => p.slug !== slug && (p.series === current.series || p.finish === current.finish))
+    .concat(products.filter((p) => p.slug !== slug))
+    .filter((p, i, arr) => arr.findIndex((x) => x.slug === p.slug) === i)
+    .slice(0, limit);
+}
+
+export function productMonthly(product: Product) {
+  return monthlyFrom(product.price);
+}
+
+export const finishes = ["Chrome", "Gold", "Black / Gold", "Purple", "Blackout"] as const;
+export const sizeFilters = ["20\"", "22\"", "24\"", "26\""] as const;
+export const seriesFilters = [
+  "Oaktown",
+  "Thizz",
+  "Hyphy",
+  "Scraper",
+  "Ghost Ride",
+  "Bay Bridge",
+] as const;

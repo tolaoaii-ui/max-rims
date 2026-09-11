@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Scraper 20 chrome rim">
+  <title>Scraper 20 chrome rim</title>
+  <defs>
+    <radialGradient id="sc20-tire" cx="50%" cy="48%">
+      <stop offset="74%" stop-color="#0a0a0a"/>
+      <stop offset="86%" stop-color="#1f1f24"/>
+      <stop offset="100%" stop-color="#050506"/>
+    </radialGradient>
+    <linearGradient id="sc20-lip" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="33%" stop-color="#cfd4dc"/><stop offset="67%" stop-color="#8b919a"/><stop offset="100%" stop-color="#f8fafc"/></linearGradient>
+    <linearGradient id="sc20-spk" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#f8fafc"/><stop offset="50%" stop-color="#9ca3af"/><stop offset="100%" stop-color="#e5e7eb"/></linearGradient>
+    <radialGradient id="sc20-cap" cx="35%" cy="30%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="55%" stop-color="#d4d4d8"/>
+      <stop offset="100%" stop-color="#222"/>
+    </radialGradient>
+  </defs>
+  <rect width="400" height="400" fill="#050505"/>
+  <circle cx="200" cy="200" r="196" fill="url(#sc20-tire)"/>
+  <circle cx="200" cy="200" r="168" fill="none" stroke="#222" stroke-width="10"/>
+  <circle cx="200" cy="200" r="156" fill="url(#sc20-lip)"/>
+  <circle cx="200" cy="200" r="142" fill="#0c0c10"/>
+  <circle cx="200" cy="200" r="140" fill="none" stroke="#000" stroke-width="3" opacity="0.5"/>
+  <line x1="200.0" y1="154.0" x2="200.0" y2="64.0" stroke="url(#sc20-spk)" stroke-width="18" stroke-linecap="round"/><line x1="243.7" y1="185.8" x2="329.3" y2="158.0" stroke="url(#sc20-spk)" stroke-width="18" stroke-linecap="round"/><line x1="227.0" y1="237.2" x2="279.9" y2="310.0" stroke="url(#sc20-spk)" stroke-width="18" stroke-linecap="round"/><line x1="173.0" y1="237.2" x2="120.1" y2="310.0" stroke="url(#sc20-spk)" stroke-width="18" stroke-linecap="round"/><line x1="156.3" y1="185.8" x2="70.7" y2="158.0" stroke="url(#sc20-spk)" stroke-width="18" stroke-linecap="round"/>
+  <circle cx="200" cy="200" r="40" fill="url(#sc20-cap)"/>
+  <circle cx="200" cy="200" r="16" fill="#111"/>
+  <text x="200" y="205" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="9" fill="#f5d76e">MR</text>
+  <circle cx="200.0" cy="172.0" r="4.2" fill="#d4d4d8" stroke="#111" stroke-width="0.6"/><circle cx="226.6" cy="191.3" r="4.2" fill="#d4d4d8" stroke="#111" stroke-width="0.6"/><circle cx="216.5" cy="222.7" r="4.2" fill="#d4d4d8" stroke="#111" stroke-width="0.6"/><circle cx="183.5" cy="222.7" r="4.2" fill="#d4d4d8" stroke="#111" stroke-width="0.6"/><circle cx="173.4" cy="191.3" r="4.2" fill="#d4d4d8" stroke="#111" stroke-width="0.6"/>
+</svg>
