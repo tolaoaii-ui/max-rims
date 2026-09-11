@@ -2,9 +2,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Thizz purple spinner rim">
   <title>Thizz purple spinner rim</title>
   <defs>
+    <radialGradient id="thz-bg" cx="50%" cy="45%">
+      <stop offset="0%" stop-color="#1a1424"/>
+      <stop offset="100%" stop-color="#050506"/>
+    </radialGradient>
     <radialGradient id="thz-tire" cx="50%" cy="48%">
-      <stop offset="74%" stop-color="#0a0a0a"/>
-      <stop offset="86%" stop-color="#1f1f24"/>
+      <stop offset="70%" stop-color="#070707"/>
+      <stop offset="84%" stop-color="#1c1c20"/>
+      <stop offset="92%" stop-color="#0a0a0a"/>
       <stop offset="100%" stop-color="#050506"/>
     </radialGradient>
     <linearGradient id="thz-lip" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#e0b0ff"/><stop offset="33%" stop-color="#7b2cbf"/><stop offset="67%" stop-color="#c77dff"/><stop offset="100%" stop-color="#240046"/></linearGradient>
@@ -15,15 +20,15 @@
       <stop offset="100%" stop-color="#222"/>
     </radialGradient>
   </defs>
-  <rect width="400" height="400" fill="#050505"/>
+  <rect width="400" height="400" fill="url(#thz-bg)"/>
   <circle cx="200" cy="200" r="196" fill="url(#thz-tire)"/>
-  <circle cx="200" cy="200" r="168" fill="none" stroke="#222" stroke-width="10"/>
-  <circle cx="200" cy="200" r="156" fill="url(#thz-lip)"/>
-  <circle cx="200" cy="200" r="142" fill="#120018"/>
-  <circle cx="200" cy="200" r="140" fill="none" stroke="#000" stroke-width="3" opacity="0.5"/>
-  <line x1="200.0" y1="152.0" x2="200.0" y2="66.0" stroke="url(#thz-spk)" stroke-width="16" stroke-linecap="round"/><line x1="233.9" y1="166.1" x2="294.8" y2="105.2" stroke="url(#thz-spk)" stroke-width="16" stroke-linecap="round"/><line x1="248.0" y1="200.0" x2="334.0" y2="200.0" stroke="url(#thz-spk)" stroke-width="16" stroke-linecap="round"/><line x1="233.9" y1="233.9" x2="294.8" y2="294.8" stroke="url(#thz-spk)" stroke-width="16" stroke-linecap="round"/><line x1="200.0" y1="248.0" x2="200.0" y2="334.0" stroke="url(#thz-spk)" stroke-width="16" stroke-linecap="round"/><line x1="166.1" y1="233.9" x2="105.2" y2="294.8" stroke="url(#thz-spk)" stroke-width="16" stroke-linecap="round"/><line x1="152.0" y1="200.0" x2="66.0" y2="200.0" stroke="url(#thz-spk)" stroke-width="16" stroke-linecap="round"/><line x1="166.1" y1="166.1" x2="105.2" y2="105.2" stroke="url(#thz-spk)" stroke-width="16" stroke-linecap="round"/><circle cx="200" cy="200" r="72" fill="none" stroke="#9d4edd" stroke-width="10" opacity="0.55"/><circle cx="200" cy="200" r="58" fill="none" stroke="#fff" stroke-width="2" opacity="0.25"/>
-  <circle cx="200" cy="200" r="40" fill="url(#thz-cap)"/>
-  <circle cx="200" cy="200" r="16" fill="#111"/>
-  <text x="200" y="205" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="9" fill="#f5d76e">MR</text>
-  <circle cx="200.0" cy="172.0" r="4.2" fill="#9d4edd" stroke="#111" stroke-width="0.6"/><circle cx="226.6" cy="191.3" r="4.2" fill="#9d4edd" stroke="#111" stroke-width="0.6"/><circle cx="216.5" cy="222.7" r="4.2" fill="#9d4edd" stroke="#111" stroke-width="0.6"/><circle cx="183.5" cy="222.7" r="4.2" fill="#9d4edd" stroke="#111" stroke-width="0.6"/><circle cx="173.4" cy="191.3" r="4.2" fill="#9d4edd" stroke="#111" stroke-width="0.6"/>
+  <circle cx="200" cy="200" r="176" fill="none" stroke="#2a2a2e" stroke-width="8"/>
+  <circle cx="200" cy="200" r="158" fill="url(#thz-lip)"/>
+  <circle cx="200" cy="200" r="144" fill="#120018"/>
+  <circle cx="200" cy="200" r="142" fill="none" stroke="#000" stroke-width="3" opacity="0.55"/>
+  <polygon points="192.0,150.6 208.0,150.6 221.3,67.7 178.7,67.7" fill="url(#thz-spk)"/><polygon points="229.3,159.5 240.5,170.7 308.6,121.6 278.4,91.4" fill="url(#thz-spk)"/><polygon points="249.4,192.0 249.4,208.0 332.3,221.3 332.3,178.7" fill="url(#thz-spk)"/><polygon points="240.5,229.3 229.3,240.5 278.4,308.6 308.6,278.4" fill="url(#thz-spk)"/><polygon points="208.0,249.4 192.0,249.4 178.7,332.3 221.3,332.3" fill="url(#thz-spk)"/><polygon points="170.7,240.5 159.5,229.3 91.4,278.4 121.6,308.6" fill="url(#thz-spk)"/><polygon points="150.6,208.0 150.6,192.0 67.7,178.7 67.7,221.3" fill="url(#thz-spk)"/><polygon points="159.5,170.7 170.7,159.5 121.6,91.4 91.4,121.6" fill="url(#thz-spk)"/><circle cx="200" cy="200" r="74" fill="none" stroke="#9d4edd" stroke-width="12" opacity="0.7"/><circle cx="200" cy="200" r="60" fill="none" stroke="#fff" stroke-width="2" opacity="0.3"/>
+  <circle cx="200" cy="200" r="44" fill="url(#thz-cap)"/>
+  <circle cx="200" cy="200" r="18" fill="#111"/>
+  <text x="200" y="206" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="10" fill="#f5d76e">MR</text>
+  <circle cx="200.0" cy="170.0" r="5" fill="#9d4edd" stroke="#111" stroke-width="0.8"/><circle cx="228.5" cy="190.7" r="5" fill="#9d4edd" stroke="#111" stroke-width="0.8"/><circle cx="217.6" cy="224.3" r="5" fill="#9d4edd" stroke="#111" stroke-width="0.8"/><circle cx="182.4" cy="224.3" r="5" fill="#9d4edd" stroke="#111" stroke-width="0.8"/><circle cx="171.5" cy="190.7" r="5" fill="#9d4edd" stroke="#111" stroke-width="0.8"/>
 </svg>

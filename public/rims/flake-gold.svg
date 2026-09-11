@@ -2,9 +2,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Gold flake mesh rim">
   <title>Gold flake mesh rim</title>
   <defs>
+    <radialGradient id="flk-bg" cx="50%" cy="45%">
+      <stop offset="0%" stop-color="#1a1424"/>
+      <stop offset="100%" stop-color="#050506"/>
+    </radialGradient>
     <radialGradient id="flk-tire" cx="50%" cy="48%">
-      <stop offset="74%" stop-color="#0a0a0a"/>
-      <stop offset="86%" stop-color="#1f1f24"/>
+      <stop offset="70%" stop-color="#070707"/>
+      <stop offset="84%" stop-color="#1c1c20"/>
+      <stop offset="92%" stop-color="#0a0a0a"/>
       <stop offset="100%" stop-color="#050506"/>
     </radialGradient>
     <linearGradient id="flk-lip" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#fff6c2"/><stop offset="33%" stop-color="#ffd700"/><stop offset="67%" stop-color="#b8860b"/><stop offset="100%" stop-color="#fff1a8"/></linearGradient>
@@ -15,15 +20,15 @@
       <stop offset="100%" stop-color="#222"/>
     </radialGradient>
   </defs>
-  <rect width="400" height="400" fill="#050505"/>
+  <rect width="400" height="400" fill="url(#flk-bg)"/>
   <circle cx="200" cy="200" r="196" fill="url(#flk-tire)"/>
-  <circle cx="200" cy="200" r="168" fill="none" stroke="#222" stroke-width="10"/>
-  <circle cx="200" cy="200" r="156" fill="url(#flk-lip)"/>
-  <circle cx="200" cy="200" r="142" fill="#100c04"/>
-  <circle cx="200" cy="200" r="140" fill="none" stroke="#000" stroke-width="3" opacity="0.5"/>
-  <line x1="200.0" y1="158.0" x2="200.0" y2="62.0" stroke="url(#flk-spk)" stroke-width="3.2" stroke-linecap="round"/><line x1="213.0" y1="160.1" x2="242.6" y2="68.8" stroke="url(#flk-spk)" stroke-width="3.2" stroke-linecap="round"/><line x1="224.7" y1="166.0" x2="281.1" y2="88.4" stroke="url(#flk-spk)" stroke-width="3.2" stroke-linecap="round"/><line x1="234.0" y1="175.3" x2="311.6" y2="118.9" stroke="url(#flk-spk)" stroke-width="3.2" stroke-linecap="round"/><line x1="239.9" y1="187.0" x2="331.2" y2="157.4" stroke="url(#flk-spk)" stroke-width="3.2" stroke-linecap="round"/><line x1="242.0" y1="200.0" x2="338.0" y2="200.0" stroke="url(#flk-spk)" stroke-width="3.2" stroke-linecap="round"/><line x1="239.9" y1="213.0" x2="331.2" y2="242.6" stroke="url(#flk-spk)" stroke-width="3.2" stroke-linecap="round"/><line x1="234.0" y1="224.7" x2="311.6" y2="281.1" stroke="url(#flk-spk)" stroke-width="3.2" stroke-linecap="round"/><line x1="224.7" y1="234.0" x2="281.1" y2="311.6" stroke="url(#flk-spk)" stroke-width="3.2" stroke-linecap="round"/><line x1="213.0" y1="239.9" x2="242.6" y2="331.2" stroke="url(#flk-spk)" stroke-width="3.2" stroke-linecap="round"/><line x1="200.0" y1="242.0" x2="200.0" y2="338.0" stroke="url(#flk-spk)" stroke-width="3.2" stroke-linecap="round"/><line x1="187.0" y1="239.9" x2="157.4" y2="331.2" stroke="url(#flk-spk)" stroke-width="3.2" stroke-linecap="round"/><line x1="175.3" y1="234.0" x2="118.9" y2="311.6" stroke="url(#flk-spk)" stroke-width="3.2" stroke-linecap="round"/><line x1="166.0" y1="224.7" x2="88.4" y2="281.1" stroke="url(#flk-spk)" stroke-width="3.2" stroke-linecap="round"/><line x1="160.1" y1="213.0" x2="68.8" y2="242.6" stroke="url(#flk-spk)" stroke-width="3.2" stroke-linecap="round"/><line x1="158.0" y1="200.0" x2="62.0" y2="200.0" stroke="url(#flk-spk)" stroke-width="3.2" stroke-linecap="round"/><line x1="160.1" y1="187.0" x2="68.8" y2="157.4" stroke="url(#flk-spk)" stroke-width="3.2" stroke-linecap="round"/><line x1="166.0" y1="175.3" x2="88.4" y2="118.9" stroke="url(#flk-spk)" stroke-width="3.2" stroke-linecap="round"/><line x1="175.3" y1="166.0" x2="118.9" y2="88.4" stroke="url(#flk-spk)" stroke-width="3.2" stroke-linecap="round"/><line x1="187.0" y1="160.1" x2="157.4" y2="68.8" stroke="url(#flk-spk)" stroke-width="3.2" stroke-linecap="round"/>
-  <circle cx="200" cy="200" r="40" fill="url(#flk-cap)"/>
-  <circle cx="200" cy="200" r="16" fill="#111"/>
-  <text x="200" y="205" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="9" fill="#f5d76e">MR</text>
-  <circle cx="200.0" cy="172.0" r="4.2" fill="#f5d76e" stroke="#111" stroke-width="0.6"/><circle cx="226.6" cy="191.3" r="4.2" fill="#f5d76e" stroke="#111" stroke-width="0.6"/><circle cx="216.5" cy="222.7" r="4.2" fill="#f5d76e" stroke="#111" stroke-width="0.6"/><circle cx="183.5" cy="222.7" r="4.2" fill="#f5d76e" stroke="#111" stroke-width="0.6"/><circle cx="173.4" cy="191.3" r="4.2" fill="#f5d76e" stroke="#111" stroke-width="0.6"/>
+  <circle cx="200" cy="200" r="176" fill="none" stroke="#2a2a2e" stroke-width="8"/>
+  <circle cx="200" cy="200" r="158" fill="url(#flk-lip)"/>
+  <circle cx="200" cy="200" r="144" fill="#100c04"/>
+  <circle cx="200" cy="200" r="142" fill="none" stroke="#000" stroke-width="3" opacity="0.55"/>
+  <circle cx="200" cy="200" r="58" fill="none" stroke="url(#flk-spk)" stroke-width="5"/><circle cx="200" cy="200" r="82" fill="none" stroke="url(#flk-spk)" stroke-width="5"/><circle cx="200" cy="200" r="106" fill="none" stroke="url(#flk-spk)" stroke-width="5"/><circle cx="200" cy="200" r="128" fill="none" stroke="url(#flk-spk)" stroke-width="5"/><polygon points="197.1,152.1 202.9,152.1 208.2,64.2 191.8,64.2" fill="url(#flk-spk)"/><polygon points="221.5,157.1 226.4,159.9 274.9,86.5 260.8,78.4" fill="url(#flk-spk)"/><polygon points="240.1,173.6 242.9,178.5 321.6,139.2 313.5,125.1" fill="url(#flk-spk)"/><polygon points="247.9,197.1 247.9,202.9 335.8,208.2 335.8,191.8" fill="url(#flk-spk)"/><polygon points="242.9,221.5 240.1,226.4 313.5,274.9 321.6,260.8" fill="url(#flk-spk)"/><polygon points="226.4,240.1 221.5,242.9 260.8,321.6 274.9,313.5" fill="url(#flk-spk)"/><polygon points="202.9,247.9 197.1,247.9 191.8,335.8 208.2,335.8" fill="url(#flk-spk)"/><polygon points="178.5,242.9 173.6,240.1 125.1,313.5 139.2,321.6" fill="url(#flk-spk)"/><polygon points="159.9,226.4 157.1,221.5 78.4,260.8 86.5,274.9" fill="url(#flk-spk)"/><polygon points="152.1,202.9 152.1,197.1 64.2,191.8 64.2,208.2" fill="url(#flk-spk)"/><polygon points="157.1,178.5 159.9,173.6 86.5,125.1 78.4,139.2" fill="url(#flk-spk)"/><polygon points="173.6,159.9 178.5,157.1 139.2,78.4 125.1,86.5" fill="url(#flk-spk)"/>
+  <circle cx="200" cy="200" r="44" fill="url(#flk-cap)"/>
+  <circle cx="200" cy="200" r="18" fill="#111"/>
+  <text x="200" y="206" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="10" fill="#f5d76e">MR</text>
+  <circle cx="200.0" cy="170.0" r="5" fill="#f5d76e" stroke="#111" stroke-width="0.8"/><circle cx="228.5" cy="190.7" r="5" fill="#f5d76e" stroke="#111" stroke-width="0.8"/><circle cx="217.6" cy="224.3" r="5" fill="#f5d76e" stroke="#111" stroke-width="0.8"/><circle cx="182.4" cy="224.3" r="5" fill="#f5d76e" stroke="#111" stroke-width="0.8"/><circle cx="171.5" cy="190.7" r="5" fill="#f5d76e" stroke="#111" stroke-width="0.8"/>
 </svg>

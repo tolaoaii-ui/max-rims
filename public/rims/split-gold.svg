@@ -2,12 +2,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Split spoke black gold rim">
   <title>Split spoke black gold rim</title>
   <defs>
-    <radialGradient id="spl-tire" cx="50%" cy="48%">
-      <stop offset="74%" stop-color="#0a0a0a"/>
-      <stop offset="86%" stop-color="#1f1f24"/>
+    <radialGradient id="spl-bg" cx="50%" cy="45%">
+      <stop offset="0%" stop-color="#1a1424"/>
       <stop offset="100%" stop-color="#050506"/>
     </radialGradient>
-    <linearGradient id="spl-lip" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#f5d76e"/><stop offset="33%" stop-color="#111111"/><stop offset="67%" stop-color="#d4af37"/><stop offset="100%" stop-color="#1a1a1a"/></linearGradient>
+    <radialGradient id="spl-tire" cx="50%" cy="48%">
+      <stop offset="70%" stop-color="#070707"/>
+      <stop offset="84%" stop-color="#1c1c20"/>
+      <stop offset="92%" stop-color="#0a0a0a"/>
+      <stop offset="100%" stop-color="#050506"/>
+    </radialGradient>
+    <linearGradient id="spl-lip" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#f5d76e"/><stop offset="33%" stop-color="#1a1a1a"/><stop offset="67%" stop-color="#d4af37"/><stop offset="100%" stop-color="#111"/></linearGradient>
     <linearGradient id="spl-spk" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#e6c35c"/><stop offset="50%" stop-color="#0a0a0a"/><stop offset="100%" stop-color="#f4e19a"/></linearGradient>
     <radialGradient id="spl-cap" cx="35%" cy="30%">
       <stop offset="0%" stop-color="#ffffff"/>
@@ -15,15 +20,15 @@
       <stop offset="100%" stop-color="#222"/>
     </radialGradient>
   </defs>
-  <rect width="400" height="400" fill="#050505"/>
+  <rect width="400" height="400" fill="url(#spl-bg)"/>
   <circle cx="200" cy="200" r="196" fill="url(#spl-tire)"/>
-  <circle cx="200" cy="200" r="168" fill="none" stroke="#222" stroke-width="10"/>
-  <circle cx="200" cy="200" r="156" fill="url(#spl-lip)"/>
-  <circle cx="200" cy="200" r="142" fill="#070707"/>
-  <circle cx="200" cy="200" r="140" fill="none" stroke="#000" stroke-width="3" opacity="0.5"/>
-  <line x1="200.0" y1="154.0" x2="200.0" y2="64.0" stroke="url(#spl-spk)" stroke-width="18" stroke-linecap="round"/><line x1="223.0" y1="160.2" x2="268.0" y2="82.2" stroke="url(#spl-spk)" stroke-width="18" stroke-linecap="round"/><line x1="239.8" y1="177.0" x2="317.8" y2="132.0" stroke="url(#spl-spk)" stroke-width="18" stroke-linecap="round"/><line x1="246.0" y1="200.0" x2="336.0" y2="200.0" stroke="url(#spl-spk)" stroke-width="18" stroke-linecap="round"/><line x1="239.8" y1="223.0" x2="317.8" y2="268.0" stroke="url(#spl-spk)" stroke-width="18" stroke-linecap="round"/><line x1="223.0" y1="239.8" x2="268.0" y2="317.8" stroke="url(#spl-spk)" stroke-width="18" stroke-linecap="round"/><line x1="200.0" y1="246.0" x2="200.0" y2="336.0" stroke="url(#spl-spk)" stroke-width="18" stroke-linecap="round"/><line x1="177.0" y1="239.8" x2="132.0" y2="317.8" stroke="url(#spl-spk)" stroke-width="18" stroke-linecap="round"/><line x1="160.2" y1="223.0" x2="82.2" y2="268.0" stroke="url(#spl-spk)" stroke-width="18" stroke-linecap="round"/><line x1="154.0" y1="200.0" x2="64.0" y2="200.0" stroke="url(#spl-spk)" stroke-width="18" stroke-linecap="round"/><line x1="160.2" y1="177.0" x2="82.2" y2="132.0" stroke="url(#spl-spk)" stroke-width="18" stroke-linecap="round"/><line x1="177.0" y1="160.2" x2="132.0" y2="82.2" stroke="url(#spl-spk)" stroke-width="18" stroke-linecap="round"/>
-  <circle cx="200" cy="200" r="40" fill="url(#spl-cap)"/>
-  <circle cx="200" cy="200" r="16" fill="#111"/>
-  <text x="200" y="205" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="9" fill="#f5d76e">MR</text>
-  <circle cx="200.0" cy="172.0" r="4.2" fill="#d4af37" stroke="#111" stroke-width="0.6"/><circle cx="226.6" cy="191.3" r="4.2" fill="#d4af37" stroke="#111" stroke-width="0.6"/><circle cx="216.5" cy="222.7" r="4.2" fill="#d4af37" stroke="#111" stroke-width="0.6"/><circle cx="183.5" cy="222.7" r="4.2" fill="#d4af37" stroke="#111" stroke-width="0.6"/><circle cx="173.4" cy="191.3" r="4.2" fill="#d4af37" stroke="#111" stroke-width="0.6"/>
+  <circle cx="200" cy="200" r="176" fill="none" stroke="#2a2a2e" stroke-width="8"/>
+  <circle cx="200" cy="200" r="158" fill="url(#spl-lip)"/>
+  <circle cx="200" cy="200" r="144" fill="#070707"/>
+  <circle cx="200" cy="200" r="142" fill="none" stroke="#000" stroke-width="3" opacity="0.55"/>
+  <polygon points="190.5,153.0 209.5,153.0 227.0,66.7 173.0,66.7" fill="url(#spl-spk)"/><polygon points="215.3,154.5 231.8,164.0 290.0,98.1 243.2,71.1" fill="url(#spl-spk)"/><polygon points="236.0,168.2 245.5,184.7 328.9,156.8 301.9,110.0" fill="url(#spl-spk)"/><polygon points="247.0,190.5 247.0,209.5 333.3,227.0 333.3,173.0" fill="url(#spl-spk)"/><polygon points="245.5,215.3 236.0,231.8 301.9,290.0 328.9,243.2" fill="url(#spl-spk)"/><polygon points="231.8,236.0 215.3,245.5 243.2,328.9 290.0,301.9" fill="url(#spl-spk)"/><polygon points="209.5,247.0 190.5,247.0 173.0,333.3 227.0,333.3" fill="url(#spl-spk)"/><polygon points="184.7,245.5 168.2,236.0 110.0,301.9 156.8,328.9" fill="url(#spl-spk)"/><polygon points="164.0,231.8 154.5,215.3 71.1,243.2 98.1,290.0" fill="url(#spl-spk)"/><polygon points="153.0,209.5 153.0,190.5 66.7,173.0 66.7,227.0" fill="url(#spl-spk)"/><polygon points="154.5,184.7 164.0,168.2 98.1,110.0 71.1,156.8" fill="url(#spl-spk)"/><polygon points="168.2,164.0 184.7,154.5 156.8,71.1 110.0,98.1" fill="url(#spl-spk)"/>
+  <circle cx="200" cy="200" r="44" fill="url(#spl-cap)"/>
+  <circle cx="200" cy="200" r="18" fill="#111"/>
+  <text x="200" y="206" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="10" fill="#f5d76e">MR</text>
+  <circle cx="200.0" cy="170.0" r="5" fill="#d4af37" stroke="#111" stroke-width="0.8"/><circle cx="228.5" cy="190.7" r="5" fill="#d4af37" stroke="#111" stroke-width="0.8"/><circle cx="217.6" cy="224.3" r="5" fill="#d4af37" stroke="#111" stroke-width="0.8"/><circle cx="182.4" cy="224.3" r="5" fill="#d4af37" stroke="#111" stroke-width="0.8"/><circle cx="171.5" cy="190.7" r="5" fill="#d4af37" stroke="#111" stroke-width="0.8"/>
 </svg>

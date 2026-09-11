@@ -2,28 +2,33 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Scraper 26 donk rim">
   <title>Scraper 26 donk rim</title>
   <defs>
-    <radialGradient id="sc26-tire" cx="50%" cy="48%">
-      <stop offset="74%" stop-color="#0a0a0a"/>
-      <stop offset="86%" stop-color="#1f1f24"/>
+    <radialGradient id="sc26-bg" cx="50%" cy="45%">
+      <stop offset="0%" stop-color="#1a1424"/>
       <stop offset="100%" stop-color="#050506"/>
     </radialGradient>
-    <linearGradient id="sc26-lip" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="33%" stop-color="#cfd4dc"/><stop offset="67%" stop-color="#8b919a"/><stop offset="100%" stop-color="#f8fafc"/></linearGradient>
-    <linearGradient id="sc26-spk" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#f8fafc"/><stop offset="50%" stop-color="#9ca3af"/><stop offset="100%" stop-color="#e5e7eb"/></linearGradient>
+    <radialGradient id="sc26-tire" cx="50%" cy="48%">
+      <stop offset="70%" stop-color="#070707"/>
+      <stop offset="84%" stop-color="#1c1c20"/>
+      <stop offset="92%" stop-color="#0a0a0a"/>
+      <stop offset="100%" stop-color="#050506"/>
+    </radialGradient>
+    <linearGradient id="sc26-lip" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#ffffff"/><stop offset="33%" stop-color="#d7dce3"/><stop offset="67%" stop-color="#8d949e"/><stop offset="100%" stop-color="#f8fafc"/></linearGradient>
+    <linearGradient id="sc26-spk" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#f8fafc"/><stop offset="50%" stop-color="#a1a8b3"/><stop offset="100%" stop-color="#eceff3"/></linearGradient>
     <radialGradient id="sc26-cap" cx="35%" cy="30%">
       <stop offset="0%" stop-color="#ffffff"/>
       <stop offset="55%" stop-color="#d4d4d8"/>
       <stop offset="100%" stop-color="#222"/>
     </radialGradient>
   </defs>
-  <rect width="400" height="400" fill="#050505"/>
+  <rect width="400" height="400" fill="url(#sc26-bg)"/>
   <circle cx="200" cy="200" r="196" fill="url(#sc26-tire)"/>
-  <circle cx="200" cy="200" r="168" fill="none" stroke="#222" stroke-width="10"/>
-  <circle cx="200" cy="200" r="156" fill="url(#sc26-lip)"/>
-  <circle cx="200" cy="200" r="142" fill="#0c0c10"/>
-  <circle cx="200" cy="200" r="140" fill="none" stroke="#000" stroke-width="3" opacity="0.5"/>
-  <polygon points="200.0,156.0 209.6,157.1 227.0,66.7 210.9,64.4" fill="url(#sc26-spk)" opacity="0.95"/><polygon points="238.1,178.0 242.0,186.8 328.9,156.8 322.8,141.6" fill="url(#sc26-spk)" opacity="0.95"/><polygon points="238.1,222.0 232.4,229.8 301.9,290.0 312.0,277.2" fill="url(#sc26-spk)" opacity="0.95"/><polygon points="200.0,244.0 190.4,242.9 173.0,333.3 189.1,335.6" fill="url(#sc26-spk)" opacity="0.95"/><polygon points="161.9,222.0 158.0,213.2 71.1,243.2 77.2,258.4" fill="url(#sc26-spk)" opacity="0.95"/><polygon points="161.9,178.0 167.6,170.2 98.1,110.0 88.0,122.8" fill="url(#sc26-spk)" opacity="0.95"/>
-  <circle cx="200" cy="200" r="40" fill="url(#sc26-cap)"/>
-  <circle cx="200" cy="200" r="16" fill="#111"/>
-  <text x="200" y="205" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="9" fill="#f5d76e">MR</text>
-  <circle cx="200.0" cy="172.0" r="4.2" fill="#d4d4d8" stroke="#111" stroke-width="0.6"/><circle cx="226.6" cy="191.3" r="4.2" fill="#d4d4d8" stroke="#111" stroke-width="0.6"/><circle cx="216.5" cy="222.7" r="4.2" fill="#d4d4d8" stroke="#111" stroke-width="0.6"/><circle cx="183.5" cy="222.7" r="4.2" fill="#d4d4d8" stroke="#111" stroke-width="0.6"/><circle cx="173.4" cy="191.3" r="4.2" fill="#d4d4d8" stroke="#111" stroke-width="0.6"/>
+  <circle cx="200" cy="200" r="176" fill="none" stroke="#2a2a2e" stroke-width="8"/>
+  <circle cx="200" cy="200" r="158" fill="url(#sc26-lip)"/>
+  <circle cx="200" cy="200" r="144" fill="#0b0b10"/>
+  <circle cx="200" cy="200" r="142" fill="none" stroke="#000" stroke-width="3" opacity="0.55"/>
+  <polygon points="200.0,154.0 212.7,155.8 224.3,66.2 194.6,64.1" fill="url(#sc26-spk)"/><polygon points="239.8,177.0 244.6,188.9 328.1,154.2 315.0,127.3" fill="url(#sc26-spk)"/><polygon points="239.8,223.0 231.9,233.1 303.7,288.0 320.4,263.2" fill="url(#sc26-spk)"/><polygon points="200.0,246.0 187.3,244.2 175.7,333.8 205.4,335.9" fill="url(#sc26-spk)"/><polygon points="160.2,223.0 155.4,211.1 71.9,245.8 85.0,272.7" fill="url(#sc26-spk)"/><polygon points="160.2,177.0 168.1,166.9 96.3,112.0 79.6,136.8" fill="url(#sc26-spk)"/>
+  <circle cx="200" cy="200" r="44" fill="url(#sc26-cap)"/>
+  <circle cx="200" cy="200" r="18" fill="#111"/>
+  <text x="200" y="206" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="10" fill="#f5d76e">MR</text>
+  <circle cx="200.0" cy="170.0" r="5" fill="#d4d4d8" stroke="#111" stroke-width="0.8"/><circle cx="228.5" cy="190.7" r="5" fill="#d4d4d8" stroke="#111" stroke-width="0.8"/><circle cx="217.6" cy="224.3" r="5" fill="#d4d4d8" stroke="#111" stroke-width="0.8"/><circle cx="182.4" cy="224.3" r="5" fill="#d4d4d8" stroke="#111" stroke-width="0.8"/><circle cx="171.5" cy="190.7" r="5" fill="#d4d4d8" stroke="#111" stroke-width="0.8"/>
 </svg>
