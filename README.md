@@ -25,7 +25,7 @@ npm start
 | `/` | Hero carousel, ready-to-ship cards, donk gallery, packages, financing CTA, tribute wall |
 | `/shop` | Demo catalog (~23 SKUs) with filters |
 | `/shop/[slug]` | Product detail + monthly estimate |
-| `/packages` | Donk / SS / scraper / forged bundles |
+| `/packages` | Rim & tire packages (size + finish + price cards) |
 | `/gallery` | Featured donks with rim specs |
 | `/financing` | Pay-over-time + lender outbound links |
 | `/apply` | Demo apply form (client-side success) |

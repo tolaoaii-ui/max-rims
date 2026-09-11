@@ -1,7 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { BrandStrip } from "@/components/BrandStrip";
+import { CallBanner } from "@/components/CallBanner";
 import { HeroCarousel } from "@/components/HeroCarousel";
+import { PackageCard } from "@/components/PackageCard";
 import { ProductCard } from "@/components/ProductCard";
 import { SectionHeading } from "@/components/SectionHeading";
 import { TributeWall } from "@/components/TributeWall";
@@ -9,7 +11,8 @@ import { TrustBar } from "@/components/TrustBar";
 import { galleryShots } from "@/lib/gallery";
 import { packages } from "@/lib/packages";
 import { readyToShipProducts } from "@/lib/products";
-import { money, site } from "@/lib/site";
+import { shopServices } from "@/lib/services";
+import { site } from "@/lib/site";
 
 export default function HomePage() {
   const ready = readyToShipProducts().slice(0, 8);
@@ -17,7 +20,51 @@ export default function HomePage() {
   return (
     <>
       <HeroCarousel />
+      <CallBanner />
       <TrustBar />
+
+      <section className="border-b border-gold/15 bg-[#100818] py-20">
+        <div className="mx-auto max-w-7xl px-4">
+          <SectionHeading
+            kicker="Rim & tire packages"
+            title="Big wheels. One number."
+            body="Donk, SS, scraper, and forged sets with size, finish, and price on the card — the collection wall, Oakland edition."
+          />
+          <div className="mt-12 grid gap-6 lg:grid-cols-2">
+            {packages.map((item, index) => (
+              <PackageCard key={item.slug} item={item} featured={index === 0} />
+            ))}
+          </div>
+          <div className="mt-10 text-center">
+            <Link
+              href="/packages"
+              className="inline-block rounded-full bg-gold px-6 py-3 text-sm font-black text-black uppercase"
+            >
+              All packages
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-4 py-20">
+        <SectionHeading
+          kicker="Shop services"
+          title="What Max actually does"
+          body="Fitment, mount, chrome, and pay-over-time — punchy like a wheel house, not a brochure."
+        />
+        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {shopServices.map((service) => (
+            <Link
+              key={service.title}
+              href={service.href}
+              className="rounded-3xl border border-gold/20 bg-black p-6 transition hover:border-gold"
+            >
+              <h3 className="font-display text-2xl uppercase text-gold">{service.title}</h3>
+              <p className="mt-2 text-sm text-chrome/75">{service.detail}</p>
+            </Link>
+          ))}
+        </div>
+      </section>
 
       <section className="mx-auto max-w-7xl px-4 py-20">
         <SectionHeading
@@ -77,48 +124,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="border-y border-gold/15 bg-[#100818] py-20">
-        <div className="mx-auto max-w-7xl px-4">
-          <SectionHeading
-            kicker="Packages"
-            title="Pull up as a set"
-            body="Wheels + mount + the stance already decided. Demo bundles."
-          />
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
-            {packages.slice(0, 3).map((item) => (
-              <Link
-                key={item.slug}
-                href="/packages"
-                className="overflow-hidden rounded-3xl border border-gold/20 bg-black"
-              >
-                <div className="relative h-48">
-                  <Image
-                    src={item.image}
-                    alt={item.name}
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                  />
-                </div>
-                <div className="p-5">
-                  <span className="rounded-full bg-gold px-2 py-0.5 text-[10px] font-black text-black">
-                    {item.badge}
-                  </span>
-                  <h3 className="mt-3 font-display text-2xl uppercase text-white">{item.name}</h3>
-                  <p className="mt-1 text-gold">
-                    {money(item.price)}
-                    {item.compareAt ? (
-                      <span className="ml-2 text-sm text-chrome/40 line-through">
-                        {money(item.compareAt)}
-                      </span>
-                    ) : null}
-                  </p>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
+      <CallBanner />
 
       <section className="mx-auto grid max-w-7xl items-center gap-10 px-4 py-20 lg:grid-cols-2">
         <div>

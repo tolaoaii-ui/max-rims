@@ -40,9 +40,9 @@ export function Header() {
         <div className="hidden items-center gap-2 md:flex">
           <a
             href={`tel:${site.phoneTel}`}
-            className="rounded-full border border-gold/40 px-3 py-2 text-xs font-bold tracking-wide text-gold uppercase hover:bg-gold hover:text-black"
+            className="rounded-full bg-gold px-3 py-2 text-xs font-black tracking-wide text-black uppercase hover:bg-white"
           >
-            Call
+            {site.phoneDisplay}
           </a>
           <a
             href={`sms:${site.phoneTel}`}
@@ -52,7 +52,7 @@ export function Header() {
           </a>
           <Link
             href="/apply"
-            className="rounded-full bg-gold px-4 py-2 text-xs font-black tracking-wide text-black uppercase hover:bg-white"
+            className="rounded-full border border-gold/40 px-4 py-2 text-xs font-black tracking-wide text-gold uppercase hover:bg-gold hover:text-black"
           >
             Apply
           </Link>

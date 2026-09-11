@@ -49,7 +49,7 @@ export function HeroCarousel() {
   const slide = slides[index];
 
   return (
-    <section className="relative min-h-[78vh] overflow-hidden bg-black">
+    <section className="relative min-h-[86vh] overflow-hidden bg-black">
       {slides.map((item, i) => (
         <Image
           key={item.src}
@@ -64,30 +64,37 @@ export function HeroCarousel() {
       <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent" />
       <div className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-black/30" />
 
-      <div className="relative z-10 mx-auto flex min-h-[78vh] max-w-7xl flex-col justify-end px-4 pb-16 pt-28">
-        <p className="font-bang text-sm tracking-[0.35em] text-gold uppercase">{slide.kicker}</p>
-        <h1 className="mt-3 max-w-3xl font-display text-6xl leading-[0.85] uppercase sm:text-8xl">
+      <div className="relative z-10 mx-auto flex min-h-[86vh] max-w-7xl flex-col justify-end px-4 pb-16 pt-28">
+        <p className="inline-flex w-fit items-center gap-2 rounded-full border border-gold/40 bg-black/50 px-3 py-1 font-bang text-[11px] tracking-[0.35em] text-gold uppercase">
+          {slide.kicker}
+        </p>
+        <h1 className="mt-4 max-w-4xl font-display text-7xl leading-[0.82] uppercase sm:text-9xl">
           <span className="gold-text">{slide.title}</span>
         </h1>
-        <p className="mt-5 max-w-xl text-lg text-pretty text-chrome/90">{slide.body}</p>
+        <p className="mt-5 max-w-xl text-lg text-pretty text-chrome/90 sm:text-xl">{slide.body}</p>
+        <p className="mt-4 font-display text-3xl uppercase text-white sm:text-4xl">
+          <a href={`tel:${site.phoneTel}`} className="hover:text-gold">
+            {site.phoneDisplay}
+          </a>
+        </p>
         <div className="mt-8 flex flex-wrap gap-3">
           <Link
-            href="/shop"
+            href="/packages"
             className="rounded-full bg-gold px-6 py-3 text-sm font-black tracking-wide text-black uppercase"
           >
-            Shop chrome
+            Rim & tire packages
           </Link>
           <Link
-            href="/gallery"
+            href="/shop"
             className="rounded-full border border-white/30 px-6 py-3 text-sm font-black tracking-wide text-white uppercase"
           >
-            See the donks
+            Shop chrome
           </Link>
           <a
             href={`tel:${site.phoneTel}`}
             className="rounded-full bg-purple-deep px-6 py-3 text-sm font-black tracking-wide text-gold uppercase"
           >
-            Call {site.phoneDisplay}
+            Call now
           </a>
         </div>
         <div className="mt-8 flex gap-2">

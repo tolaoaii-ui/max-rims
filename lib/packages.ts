@@ -5,6 +5,9 @@ export type WheelPackage = {
   compareAt?: number;
   badge: string;
   image: string;
+  size: string;
+  finish: string;
+  vehicle: string;
   includes: string[];
   blurb: string;
   href: string;
@@ -18,6 +21,9 @@ export const packages: WheelPackage[] = [
     compareAt: 3299,
     badge: "26\" READY",
     image: "/donk-purple-caprice.png",
+    size: "26x10",
+    finish: "Chrome dubs",
+    vehicle: "Caprice / box Chevy donk",
     includes: [
       "Set of 26\" chrome dubs (demo SKU)",
       "Mount + road-force balance",
@@ -34,6 +40,9 @@ export const packages: WheelPackage[] = [
     compareAt: 2499,
     badge: "SS FITMENT",
     image: "/donk-red-impala.png",
+    size: "22x8.5",
+    finish: "Chrome mesh + gold lip",
+    vehicle: "Impala SS B-body",
     includes: [
       "Impala SS Mesh 22s + gold lip",
       "5x127 adapters if needed",
@@ -49,6 +58,9 @@ export const packages: WheelPackage[] = [
     price: 2599,
     badge: "GOLD",
     image: "/donk-black-gold.png",
+    size: "22x9",
+    finish: "Black / gold multi-spoke",
+    vehicle: "Buick sedan / G-body",
     includes: [
       "Yayo Gold Lip or Gas Station Gold",
       "Black/gold hardware kit",
@@ -65,6 +77,9 @@ export const packages: WheelPackage[] = [
     compareAt: 1699,
     badge: "20–22\"",
     image: "/rim-chrome.png",
+    size: "20–22\"",
+    finish: "Chrome scraper lip",
+    vehicle: "Daily Caprice / Impala",
     includes: [
       "East 14th 20s or Town Scraper 22s",
       "Chrome lug kit",
@@ -80,6 +95,9 @@ export const packages: WheelPackage[] = [
     price: 1999,
     badge: "PURPLE",
     image: "/hero-mural.png",
+    size: "22\" deep dish",
+    finish: "Chrome / purple spin",
+    vehicle: "Night-lot G-body",
     includes: [
       "Thizz Deep Dish or Thizzelle Purple Spin",
       "Purple/gold valve stems",
@@ -95,6 +113,9 @@ export const packages: WheelPackage[] = [
     price: 3499,
     badge: "FORGED",
     image: "/rim-black-gold.png",
+    size: "20–22\"",
+    finish: "Forged black + gold",
+    vehicle: "Club-lot daily / show",
     includes: [
       "Hyphy Forged 20/22 set of four",
       "Gold hardware",
