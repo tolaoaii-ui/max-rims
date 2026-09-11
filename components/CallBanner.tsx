@@ -8,13 +8,13 @@ export function CallBanner() {
         <div className="flex flex-wrap items-center gap-3">
           <a
             href={`tel:${site.phoneTel}`}
-            className="rounded-full bg-black px-5 py-2 text-sm font-black tracking-wide text-gold uppercase"
+            className="rounded-sm bg-black px-5 py-2 text-sm font-black tracking-wide text-gold uppercase"
           >
             Call {site.phoneDisplay}
           </a>
           <a
             href={`sms:${site.phoneTel}`}
-            className="rounded-full border-2 border-black px-5 py-2 text-sm font-black uppercase"
+            className="rounded-sm border-2 border-black px-5 py-2 text-sm font-black uppercase"
           >
             Text the shop
           </a>

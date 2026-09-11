@@ -1,12 +1,14 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { finishes, products, sizeFilters } from "@/lib/products";
 import { ProductCard } from "./ProductCard";
 
 export function ShopGrid() {
-  const [finish, setFinish] = useState("All");
-  const [size, setSize] = useState("All");
+  const params = useSearchParams();
+  const [finish, setFinish] = useState(params.get("finish") ?? "All");
+  const [size, setSize] = useState(params.get("size") ?? "All");
   const [ready, setReady] = useState(false);
 
   const filtered = useMemo(() => {

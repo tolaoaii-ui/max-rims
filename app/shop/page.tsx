@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { ShopGrid } from "@/components/ShopGrid";
 import { products } from "@/lib/products";
 
@@ -17,7 +18,9 @@ export default function ShopPage() {
         carry sale badges, strikethroughs, and monthly estimates that route to financing.
       </p>
       <div className="mt-10">
-        <ShopGrid />
+        <Suspense fallback={<p className="text-chrome/60">Loading the rack…</p>}>
+          <ShopGrid />
+        </Suspense>
       </div>
     </div>
   );

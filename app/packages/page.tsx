@@ -20,9 +20,9 @@ export default function PackagesPage() {
         Rim & tire packages with size, finish, and price on the card. Demo numbers. Call Max to
         lock a real set.
       </p>
-      <div className="mt-12 grid gap-8 lg:grid-cols-2">
-        {packages.map((item, index) => (
-          <PackageCard key={item.slug} item={item} featured={index < 2} />
+      <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+        {packages.map((item) => (
+          <PackageCard key={item.slug} item={item} />
         ))}
       </div>
     </div>

@@ -20,7 +20,7 @@ export function MobileStickyBar() {
         href={`tel:${site.phoneTel}`}
         className="rounded-full bg-purple-deep py-3 text-center text-sm font-black tracking-wide text-gold uppercase"
       >
-        Call
+        Call now
       </a>
     </div>
   );

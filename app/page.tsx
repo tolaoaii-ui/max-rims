@@ -6,12 +6,13 @@ import { HeroCarousel } from "@/components/HeroCarousel";
 import { PackageCard } from "@/components/PackageCard";
 import { ProductCard } from "@/components/ProductCard";
 import { SectionHeading } from "@/components/SectionHeading";
+import { ServicesGrid } from "@/components/ServicesGrid";
+import { ShopByStrip } from "@/components/ShopByStrip";
 import { TributeWall } from "@/components/TributeWall";
 import { TrustBar } from "@/components/TrustBar";
 import { galleryShots } from "@/lib/gallery";
 import { packages } from "@/lib/packages";
 import { readyToShipProducts } from "@/lib/products";
-import { shopServices } from "@/lib/services";
 import { site } from "@/lib/site";
 
 export default function HomePage() {
@@ -21,48 +22,77 @@ export default function HomePage() {
     <>
       <HeroCarousel />
       <CallBanner />
+      <ShopByStrip />
       <TrustBar />
 
-      <section className="border-b border-gold/15 bg-[#100818] py-20">
+      <section id="packages" className="border-b border-gold/15 bg-[#100818] py-16">
         <div className="mx-auto max-w-7xl px-4">
-          <SectionHeading
-            kicker="Rim & tire packages"
-            title="Big wheels. One number."
-            body="Donk, SS, scraper, and forged sets with size, finish, and price on the card — the collection wall, Oakland edition."
-          />
-          <div className="mt-12 grid gap-6 lg:grid-cols-2">
-            {packages.map((item, index) => (
-              <PackageCard key={item.slug} item={item} featured={index === 0} />
-            ))}
-          </div>
-          <div className="mt-10 text-center">
+          <div className="flex flex-wrap items-end justify-between gap-6">
+            <div className="max-w-2xl">
+              <p className="font-bang text-xs tracking-[0.28em] text-gold uppercase">
+                Rim & tire packages
+              </p>
+              <h2 className="mt-2 font-display text-4xl uppercase leading-none text-white sm:text-6xl">
+                Collection: one number
+              </h2>
+              <p className="mt-3 text-chrome/70">
+                Size, finish, and price on every card — donk, SS, scraper, and forged sets. Original
+                MAX RIMS demo packages.
+              </p>
+            </div>
             <Link
               href="/packages"
-              className="inline-block rounded-full bg-gold px-6 py-3 text-sm font-black text-black uppercase"
+              className="rounded-sm bg-gold px-5 py-3 text-xs font-black tracking-wide text-black uppercase"
             >
-              All packages
+              View all packages
             </Link>
+          </div>
+          <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {packages.map((item) => (
+              <PackageCard key={item.slug} item={item} />
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-4 py-20">
-        <SectionHeading
-          kicker="Shop services"
-          title="What Max actually does"
-          body="Fitment, mount, chrome, and pay-over-time — punchy like a wheel house, not a brochure."
-        />
-        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {shopServices.map((service) => (
+      <ServicesGrid />
+
+      <section className="relative overflow-hidden border-y border-gold/20">
+        <div className="absolute inset-0">
+          <Image
+            src="/rim-black-gold.png"
+            alt="Hyphy Forged black and gold multi-spoke rim"
+            fill
+            className="object-cover object-center"
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-black/70" />
+        </div>
+        <div className="relative z-10 mx-auto flex max-w-7xl flex-col gap-6 px-4 py-20 lg:flex-row lg:items-center lg:justify-between">
+          <div>
+            <p className="font-bang text-xs tracking-[0.3em] text-gold uppercase">Forged / gold lip</p>
+            <h2 className="mt-2 font-display text-5xl uppercase text-white sm:text-7xl">
+              Big face. Town gold.
+            </h2>
+            <p className="mt-3 max-w-xl text-chrome/80">
+              The luxury-forged look, Oakland edition — Hyphy Forged and Gas Station Gold. No
+              off-road catalog photos. Call Max for offsets.
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-3">
             <Link
-              key={service.title}
-              href={service.href}
-              className="rounded-3xl border border-gold/20 bg-black p-6 transition hover:border-gold"
+              href="/shop/hyphy-forged"
+              className="rounded-sm bg-gold px-6 py-3 text-sm font-black text-black uppercase"
             >
-              <h3 className="font-display text-2xl uppercase text-gold">{service.title}</h3>
-              <p className="mt-2 text-sm text-chrome/75">{service.detail}</p>
+              Hyphy Forged
             </Link>
-          ))}
+            <a
+              href={`tel:${site.phoneTel}`}
+              className="rounded-sm border border-gold px-6 py-3 text-sm font-black text-gold uppercase"
+            >
+              Call {site.phoneDisplay}
+            </a>
+          </div>
         </div>
       </section>
 

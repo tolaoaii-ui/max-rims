@@ -9,8 +9,14 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-gold/25 bg-ink/90 backdrop-blur-md">
-      <div className="bg-purple-deep px-3 py-1.5 text-center text-[11px] font-semibold tracking-[0.18em] text-gold uppercase sm:text-xs">
-        Oakland · Bay Area · Chrome · Donks · Pay over time
+      <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 bg-gold px-3 py-2 text-center text-[11px] font-black tracking-[0.14em] text-black uppercase sm:text-xs">
+        <span>Oakland · Bay Area · Chrome · Donks</span>
+        <a href={`tel:${site.phoneTel}`} className="underline decoration-black/40 underline-offset-2">
+          Call {site.phoneDisplay}
+        </a>
+        <a href={`sms:${site.phoneTel}`} className="underline decoration-black/40 underline-offset-2">
+          Text the shop
+        </a>
       </div>
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3">
         <Link href="/" className="group flex items-center gap-2" onClick={() => setOpen(false)}>
